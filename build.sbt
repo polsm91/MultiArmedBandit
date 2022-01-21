@@ -1,14 +1,10 @@
-name := "MultiArmBandit"
+ThisBuild / scalaVersion := "2.12.13"
+ThisBuild / organization := "MultiArmBandit"
 
-version := "1.0"
-
-scalaVersion := "2.11.7"
-
-libraryDependencies  ++= Seq(
-  "org.scalanlp" %% "breeze" % "0.11.2"
-)
-
-resolvers ++= Seq(
-  "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
-  "Sonatype Releases" at "https://oss.sonatype.org/content/repositories/releases/"
-)
+lazy val hello = (project in file("."))
+  .settings(
+    name := "Hello",
+    libraryDependencies  ++= Seq(
+      "org.scalanlp" %% "breeze" % "0.13"
+    )
+  )
